@@ -4,10 +4,13 @@ var _weatherService = new WeatherService()
 
 function drawWeather() {
 	console.log("THE WEATHER MAN SAYS:", _weatherService.Weather)
+	let template = ''
+	let weather = _weatherService.Weather
+	template = weather.getTemplate()
+	document.getElementById('weather').innerHTML = template
 }
 
 export default class WeatherController {
-
 	constructor() {
 		_weatherService.addSubscriber('weather', drawWeather)
 		_weatherService.getWeather()

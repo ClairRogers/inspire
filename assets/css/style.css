@@ -2,3 +2,36 @@
   color: red;
   font-size: 2em;
 }
+
+body {
+  height: 100vh;
+  background-size: cover;
+  color: white;
+  text-shadow: 0 0 7px black;
+}
+
+#weather {
+  background-color: rgba(0, 0, 0, 0.432);
+  padding: 20px;
+  padding-bottom: 5px;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.blackbox {
+  background-color: rgba(0, 0, 0, 0.432);
+  padding: 20px;
+  padding-bottom: 5px;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.flexin {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0
+}
+
+.viewheight {
+  height: 100vh;
+}

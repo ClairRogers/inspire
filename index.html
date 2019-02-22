@@ -6,24 +6,40 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Inspire</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+		integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 	<link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body id="bg-image">
-	<div id="weather">
-		Your Weather Template
-	</div>
+<body id="bg-image" background="URL">
+	<main class="container-fluid">
+		<div class="row">
+			<div class="col-12 col-md-3">
+				<div class="blackbox mt-3">
+					A Todo List
+					<div id="todo-error"></div>
+					<form onsubmit=""></form>
+					<div id="todos"></div>
+				</div>
+			</div>
+			<div class="col-12 col-md-6 d-flex align-items-center viewheight justify-content-center">
+				<h1>suh dude</h1>
+			</div>
+			<div class="col-12 col-md-3">
+				<div id="weather" class="mt-3">
+					<!-- weather here -->
+				</div>
+				<div id="quote">
+					The Quote
+				</div>
+			</div>
+		</div>
+	</main>
 
-	<div id="quote">
-		The Quote
-	</div>
 
-	<div>
-		A Todo List
-		<div id="todo-error"></div>
-		<form onsubmit=""></form>
-		<div id="todos"></div>
-	</div>
+
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
 	<script type="module" src="app/main.js"></script>
