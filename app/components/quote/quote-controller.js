@@ -3,7 +3,6 @@ import QuoteService from "./quote-service.js";
 let _qs = new QuoteService()
 
 function drawQuote() {
-  console.log('getting quote')
   let template = ''
   let quote = _qs.Quote
   template = quote.getTemplate()

@@ -15,6 +15,15 @@ function startTime() {
   var session = 'AM'
   m = checkTime(m);
   s = checkTime(s);
+
+  if (h <= 12) {
+    document.getElementById('welcome').innerText = 'Good Morning'
+  } else if (h <= 18) {
+    document.getElementById('welcome').innerText = 'Good Afternoon'
+  } else {
+    document.getElementById('welcome').innerText = 'Good Evening'
+  }
+
   if (h == 0) {
     h = 12;
   }
@@ -23,15 +32,6 @@ function startTime() {
     h = h - 12;
     session = "PM";
   }
-
-  if (h <= 12) {
-    document.getElementById('welcome').innerText = 'Good Morning'
-  } else if (h <= 5) {
-    document.getElementById('welcome').innerText = 'Good Afternoon'
-  } else {
-    document.getElementById('welcome').innerText = 'Good Evening'
-  }
-
 
   document.getElementById('clock').innerHTML = `<h1 class="big">${h}:${m} ${session}</h1>`
   var t = setTimeout(startTime, 500);
