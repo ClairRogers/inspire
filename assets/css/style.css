@@ -21,9 +21,8 @@ body {
 .blackbox {
   background-color: rgba(0, 0, 0, 0.432);
   padding: 20px;
-  padding-bottom: 5px;
-  width: 100%;
   border-radius: 5px;
+  width: 100%;
 }
 
 .flexin {
@@ -34,4 +33,31 @@ body {
 
 .viewheight {
   height: 100vh;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  margin: auto;
+  width: 100%;
+  z-index: 10;
+}
+
+#quote {
+  background-color: rgba(0, 0, 0, 0.432);
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.big {
+  font-size: 120px
+}
+
+#todos input, span {
+cursor: pointer;
+}
+
+input[type=checkbox]:checked {
+  text-decoration: line-through;
 }
