@@ -56,6 +56,23 @@ footer {
   font-size: 120px
 }
 
-#todos input, span {
+#todos span {
 cursor: pointer;
+}
+
+
+.quote {
+  transition: all .5s ease;
+}
+
+.author { 
+    display: none; 
+}
+
+.quote:hover .author {
+    display: inline;
+}
+
+.quote:hover .thequote {
+    display: none;
 }

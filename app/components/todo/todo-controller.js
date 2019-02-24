@@ -9,7 +9,7 @@ function _drawTodos() {
 		template += t.getTemplate()
 	});
 	document.getElementById('todos').innerHTML = template
-	document.getElementById('count').innerHTML = `<p>Count: ${todos.length}</p>`
+	document.getElementById('count').innerHTML = `<p>Number of tasks: ${todos.length}</p>`
 }
 
 function _drawError() {
