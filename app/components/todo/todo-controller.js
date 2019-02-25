@@ -6,7 +6,11 @@ function _drawTodos() {
 	let template = ''
 	let todos = _todoService.TodoList
 	todos.forEach(t => {
-		template += t.getTemplate()
+		if (t.completed == true) {
+			template += `<s>${t.getTemplate()}</s>`
+		} else {
+			template += t.getTemplate()
+		}
 	});
 	document.getElementById('todos').innerHTML = template
 	document.getElementById('count').innerHTML = `<p>Number of tasks: ${todos.length}</p>`
@@ -37,7 +41,7 @@ export default class TodoController {
 
 	toggleTodoStatus(todoId) {
 		// asks the service to edit the todo status
-		document.getElementById(todoId).style.textDecoration = 'line-through'
+		//document.getElementById(todoId).style.textDecoration = 'line-through'
 		_todoService.toggleTodoStatus(todoId)
 	}
 

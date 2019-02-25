@@ -6,6 +6,6 @@ export default class Todo {
 
   }
   getTemplate() {
-    return `<input type="checkbox" onclick="app.controllers.todoController.toggleTodoStatus('${this._id}')"> <span id="${this._id}">${this.description}</span> <span class="ml-2" onclick="app.controllers.todoController.removeTodo('${this._id}')"><i class="fas fa-times"></i></span><br>`
+    return `<li onclick="app.controllers.todoController.toggleTodoStatus('${this._id}')"> <span id="${this._id}">${this.description}</span> <span class="ml-2" onclick="app.controllers.todoController.removeTodo('${this._id}')"><i class="fas fa-times"></i></span></li>`
   }
 }
