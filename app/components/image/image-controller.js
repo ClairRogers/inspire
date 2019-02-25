@@ -5,6 +5,7 @@ var _is = new ImageService()
 function drawImage() {
   let image = _is.Image
   document.getElementById('bg-image').setAttribute('background', image.getTemplate())
+  document.getElementById('img-credit').innerHTML = `<p><i class="fas fa-camera"></i> ${image.site}</p>`
 }
 
 function startTime() {
@@ -47,6 +48,10 @@ export default class ImageController {
     _is.addSubscriber('image', drawImage)
     _is.getImage()
     startTime()
+  }
+
+  getImage() {
+    _is.getImage()
   }
 }
 
