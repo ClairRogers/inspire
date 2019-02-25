@@ -8,7 +8,7 @@ export default class Weather {
     this.city = data.name
     this.kelvin = (data.main.temp - 273.15) * 9 / 5 + 32
     this.overview = data.weather.main
-    this.desc = data.desc || data.weather.description
+    this.desc = data.desc || data.weather[0].description
     this.humid = data.main.humidity
     this.wind = data.wind.speed
     this.icon = data.weather[0].icon
@@ -21,7 +21,7 @@ export default class Weather {
 			<p><b>${this.city.toUpperCase()}, ID</b></p>
 			<p>${this.kelvin.toFixed(0)}°</p>
 		</div>
-		<div class="text-center"><img src="http://openweathermap.org/img/w/${this.icon}.png"></div>
+		<div class="text-center"><img data-toggle="tooltip" data-placement="top" title="${this.desc}" src="http://openweathermap.org/img/w/${this.icon}.png"></div>
 		<div class="flexin flex-end">
 			<p class="mt-3">Wind Speed: ${this.wind}mph</p>
 			<p class="mt-3">Humidity: ${this.humid}%</p>
